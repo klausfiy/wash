@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浪淘-搜索中心</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="./less/search.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="./index.html" class="icon_back fa fa-arrow-left"></a>
+        <h3 class="search-home">搜索中心</h3>
+    </header>
+    <main id="main">
+        <form action="#">
+            <input class="search" type="search" placeholder="搜索你喜欢的商品">
+            <button type="button" class="btn-search mui-btn mui-btn-primary">搜索</button>
+        </form>
+        <div class="history">
+            <div class="mui-clearfix">
+                <span class="title">搜索历史</span>
+                <span class="empty-record">清空记录</span>
+            </div>
+            <div class="history-list">
+                <ul class="mui-table-view">
+                    <!-- template -->
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="./index.html" class="fa fa-home active">首页</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="./category.html" class="fa fa-bars">分类</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" class="fa fa-shopping-cart">购物车</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" class="fa fa-user">会员中心</a>
+            </div>
+        </div>
+    </footer>
+    <script id="historyDataTmp" type="text/html">
+        {{each rows as value i}}
+            <li class="mui-table-view-cell">
+                <a href="#">{{value}}</a>
+                <span class="btn_delete fa fa-close"></span>
+            </li>
+        {{/each}}
+    </script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+
+</html>

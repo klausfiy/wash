@@ -1,0 +1,55 @@
+@import 'base.less';
+
+
+#main {
+
+    > form {
+        padding: 10px;
+        position: relative;
+        background-color: #fff;
+        .search {
+            background-color: #fff;
+            margin: 0;
+            border: 1px solid @main-color;
+            text-align: left;
+        }
+        > button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+    .history {
+        padding: 10px;
+        .title {
+            font-style: 14px;
+            color: #666;
+            float: left;    
+        }
+        .empty-record {
+            font-style: 14px;    
+            color: #666;                    
+            float: right;
+        }
+        .history-list {
+            margin-top: 20px;
+            > ul {
+                border-right: 1px solid #ccc;
+                border-left: 1px solid #ccc;
+                list-style: none;
+                li {
+                    > a {
+                        color: #666;
+                    }
+                    .btn_delete {
+                        position: absolute;
+                        right: 15px;
+                        top: 13px;
+                        color: #666;
+                    }
+                }
+
+            }
+        }
+    }
+}
